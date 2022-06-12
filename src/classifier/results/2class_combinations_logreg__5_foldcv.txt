@@ -1,0 +1,15 @@
+Data	Feature	F1-score	AUROC	Weighted F1	Precision	Recall	Accuracy	AUPRC	Correlation	Parameters
+5S_334	ttr_concreteness_linguistic	0.8367	0.8902	0.8068	0.849	0.8318	0.8084	0.9252	0.71	{'C': 1000, 'max_iter': 5000, 'penalty': 'l1', 'solver': 'liblinear'}
+5S_334	tfidf_ttr_concreteness_linguistic	0.9084	0.9425	0.8918	0.9108	0.9082	0.8922	0.9613	0.7953	{'C': 1000, 'max_iter': 5000, 'penalty': 'l1', 'solver': 'liblinear'}
+5S_334	doc2vec_tm	0.8511	0.8888	0.8137	0.8263	0.8835	0.8174	0.9144	0.6688	{'C': 1, 'max_iter': 5000, 'penalty': 'l1', 'solver': 'liblinear'}
+5S_334	doc2vec_tm_ttr	0.8431	0.8879	0.8041	0.8263	0.8682	0.8083	0.9152	0.6594	{'C': 1, 'max_iter': 5000, 'penalty': 'l1', 'solver': 'liblinear'}
+5S_334	doc2vec_tm_ttr_concreteness	0.851	0.8925	0.8264	0.8618	0.8427	0.8264	0.911	0.712	{'C': 1, 'max_iter': 5000, 'penalty': 'l1', 'solver': 'liblinear'}
+5S_334	doc2vec_ttr	0.8496	0.8894	0.8096	0.8243	0.8832	0.8143	0.9168	0.6587	{'C': 1, 'max_iter': 5000, 'penalty': 'l1', 'solver': 'liblinear'}
+5S_334	doc2vec_ttr_mtld	0.8429	0.8867	0.8004	0.8157	0.8782	0.8053	0.9126	0.6539	{'C': 1, 'max_iter': 5000, 'penalty': 'l1', 'solver': 'liblinear'}
+5S_334	doc2vec_concreteness	0.8446	0.8914	0.817	0.8492	0.8427	0.8174	0.9054	0.7101	{'C': 1, 'max_iter': 5000, 'penalty': 'l1', 'solver': 'liblinear'}
+5S_334	doc2vec_ttr_concreteness	0.8468	0.8914	0.82	0.8545	0.8427	0.8204	0.9055	0.7093	{'C': 1, 'max_iter': 5000, 'penalty': 'l1', 'solver': 'liblinear'}
+5S_334	doc2vec_ttr_linguistic	0.8467	0.8862	0.8069	0.8232	0.8782	0.8113	0.9133	0.6585	{'C': 1, 'max_iter': 5000, 'penalty': 'l1', 'solver': 'liblinear'}
+5S_334	doc2vec_ttr_concreteness_linguistic	0.8468	0.8914	0.82	0.8545	0.8427	0.8204	0.9055	0.7092	{'C': 1, 'max_iter': 5000, 'penalty': 'l1', 'solver': 'liblinear'}
+5S_334	tfidf_concreteness	0.901	0.9444	0.883	0.9003	0.9033	0.8833	0.9615	0.782	{'C': 1000, 'max_iter': 5000, 'penalty': 'l1', 'solver': 'liblinear'}
+5S_334	doc2vec_ttr_concreteness_linguistic_tfidf	0.8469	0.8973	0.8203	0.853	0.8428	0.8205	0.9133	0.716	{'C': 1, 'max_iter': 5000, 'penalty': 'l1', 'solver': 'liblinear'}
+5S_334	tm_ttr_concreteness_linguistic	0.8151	0.8841	0.7793	0.8198	0.8168	0.7815	0.9236	0.6883	{'C': 1, 'max_iter': 5000, 'penalty': 'l1', 'solver': 'liblinear'}

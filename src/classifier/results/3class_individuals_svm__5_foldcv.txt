@@ -1,0 +1,10 @@
+Data	Feature	F1-score	AUROC	Weighted F1	Precision	Recall	Accuracy	AUPRC	Correlation	Parameters
+5S_334	linguistic	0.5928	-1.0	0.4443	0.5928	0.5928	0.5928	-1.0	0.3904	{'C': 1, 'kernel': 'linear'}
+5S_334	improved_concreteness	0.7667	-1.0	0.7633	0.7667	0.7667	0.7667	-1.0	0.6483	{'C': 1, 'kernel': 'linear'}
+5S_334	ttr	0.6734	-1.0	0.6359	0.6734	0.6734	0.6734	-1.0	0.4004	{'C': 1, 'kernel': 'linear'}
+5S_334	deictic	0.5898	-1.0	0.4377	0.5898	0.5898	0.5898	-1.0	0.3802	{'C': 0.01, 'kernel': 'linear'}
+5S_334	sequencers	0.5898	-1.0	0.4377	0.5898	0.5898	0.5898	-1.0	0.0106	{'C': 0.01, 'kernel': 'linear'}
+5S_334	perceptual_verbs_spatial_prepositions	0.5898	-1.0	0.4377	0.5898	0.5898	0.5898	-1.0	-0.258	{'C': 0.01, 'kernel': 'linear'}
+5S_334	doc2vec	0.8142	-1.0	0.7932	0.8142	0.8142	0.8142	-1.0	0.8032	{'C': 0.01, 'kernel': 'linear'}
+5S_334	tm	0.6196	-1.0	0.5616	0.6196	0.6196	0.6196	-1.0	0.1753	{'C': 1, 'kernel': 'linear'}
+5S_334	tfidf	0.9341	-1.0	0.934	0.9341	0.9341	0.9341	-1.0	0.8634	{'C': 1, 'kernel': 'linear'}
