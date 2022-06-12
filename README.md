@@ -8,8 +8,8 @@ Special thanks to Piper et al. (2021) for the foundation of this code.
 The original code can be found here: https://doi.org/10.7910/DVN/DAWVME
 The accompanying paper can be found here: http://ceur-ws.org/Vol-2989/long_paper49.pdf
 
---- IMPORTANT ---
-To prevent problems running parts of the code, edit the variable BOOK_PATH in /src/classifier/config.py to
+
+IMPORTANT: To prevent problems running parts of the code, edit the variable BOOK_PATH in /src/classifier/config.py to
 the absolute path of the BookNLP output on your PC. The data set, BookNLP output and Concreteness Rating files are not standard included in this project
 directory.
 
