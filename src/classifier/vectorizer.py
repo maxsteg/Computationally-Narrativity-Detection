@@ -1622,3 +1622,67 @@ def pos_dep_doc2vec_concreteness_ld_linguistic(train_x, test_x):
     else:  # test set is empty
         combined_test = np.array([])
     return combined_train, combined_test
+
+
+########################
+
+def tfidf_doc2vec(train_x, test_x):
+    tfidf_train, tfidf_test = tfidf(train_x, test_x)
+    d2v_train, d2v_test = doc2vec(train_x, test_x)
+
+    combined_train = np.hstack((tfidf_train.toarray(), d2v_train))
+    combined_test = np.hstack((tfidf_test.toarray(), d2v_test))
+
+    return combined_train, combined_test
+
+
+def tfidf_doc2vec_concreteness(train_x, test_x):
+    train_vec, test_vec = tfidf_doc2vec(train_x, test_x)
+    conc_train, conc_test = improved_concreteness(train_x, test_x)
+
+    combined_train = np.hstack((train_vec, conc_train))
+    combined_test = np.hstack((test_vec, conc_test))
+
+    return combined_train, combined_test
+
+
+def tfidf_doc2vec_word1(train_x, test_x):
+    train_vec, test_vec = tfidf_doc2vec(train_x, test_x)
+    word_train, word_test = word_unigrams(train_x, test_x)
+
+    combined_train = np.hstack((train_vec, word_train.toarray()))
+    combined_test = np.hstack((test_vec, word_test.toarray()))
+
+    return combined_train, combined_test
+
+
+def tfidf_word1_concreteness(train_x, test_x):
+    tfidf_train, tfidf_test = tfidf(train_x, test_x)
+    word_train, word_test = word_unigrams(train_x, test_x)
+    conc_train, conc_test = improved_concreteness(train_x, test_x)
+
+    combined_train = np.hstack((tfidf_train, word_train.toarray(), conc_train))
+    combined_test = np.hstack((tfidf_test, word_test.toarray(), conc_test))
+
+    return combined_train, combined_test
+
+
+def word1_doc2vec_concreteness(train_x, test_x):
+    d2v_train, d2v_test = doc2vec(train_x, test_x)
+    word_train, word_test = word_unigrams(train_x, test_x)
+    conc_train, conc_test = improved_concreteness(train_x, test_x)
+
+    combined_train = np.hstack((d2v_train, word_train.toarray(), conc_train))
+    combined_test = np.hstack((d2v_test, word_test.toarray(), conc_test))
+
+    return combined_train, combined_test
+
+
+def word1_doc2vec_tfidf_concreteness(train_x, test_x):
+    train_vec, test_vec = word1_doc2vec_concreteness(train_x, test_x)
+    tfidf_train, tfidf_test = tfidf(train_x, test_x)
+
+    combined_train = np.hstack((train_vec, tfidf_train.toarray()))
+    combined_test = np.hstack((test_vec, tfidf_test.toarray()))
+
+    return combined_train, combined_test

@@ -171,12 +171,28 @@ def run_experiments(algo, X, Y, name):
     elif name == 'doc2vec_mtld':
         funct = vectorizer.doc2vec_mtld
 
-    f1, auc, weighted_f1, prec, rec, accuracy, auprc, corr, params = tuning.hyperparameter_tuning(algo, X, Y, funct,
+    # Extra
+    elif name == 'tfidf_doc2vec':
+        funct = vectorizer.tfidf_doc2vec
+    elif name == 'tfidf_doc2vec_concreteness':
+        funct = vectorizer.tfidf_doc2vec_concreteness
+    elif name == 'tfidf_doc2vec_word1':
+        funct = vectorizer.tfidf_doc2vec_word1
+    elif name == 'tfidf_word1_concreteness':
+        funct = vectorizer.tfidf_doc2vec_word1
+    elif name == 'word1_doc2vec_concreteness':
+        funct = vectorizer.tfidf_doc2vec_word1
+    elif name == 'word1_doc2vec_tfidf_concreteness':
+        funct = vectorizer.tfidf_doc2vec_word1
+
+
+    r2, f1, auc, weighted_f1, prec, rec, accuracy, auprc, corr, params = tuning.hyperparameter_tuning(algo, X, Y, funct,
                                                                                                   NUMBER_OF_FOLDS,
                                                                                                   three_class)
-    print("F1:", f1)
+
+    print("R2:", r2)
     results_file.write(
-        str(f1) + '\t' + str(auc) + '\t' + str(weighted_f1) + '\t' + str(prec) + '\t' + str(rec) + '\t' + str(
+        str(r2) + '\t' + str(f1) + '\t' + str(auc) + '\t' + str(weighted_f1) + '\t' + str(prec) + '\t' + str(rec) + '\t' + str(
             accuracy) + '\t' + str(auprc) + '\t' + str(corr) + '\t' + str(params) + '\n')
 
 
@@ -198,7 +214,7 @@ def main(three_class=False):
 
 
 if __name__ == '__main__':
-    algo_name = 'svm'  # 'rf' or 'logreg' or 'svm'
+    algo_name = 'theilsenregressor'  # 'rf' or 'logreg' or 'svm' or '
     NUMBER_OF_FOLDS = 5
 
     three_class = False
@@ -210,7 +226,7 @@ if __name__ == '__main__':
     print("\n-------\nResults path:", results_path, "\n\n")
     results_file = open(results_path, "w")
     results_file.write(
-        "Data\tFeature\tF1-score\tAUROC\tWeighted F1\tPrecision\tRecall\tAccuracy\tAUPRC\tCorrelation\tParameters\n")
+        "Data\tFeature\tR2-score\tF1-score\tAUROC\tWeighted F1\tPrecision\tRecall\tAccuracy\tAUPRC\tCorrelation\tParameters\n")
 
     # For all possibilities, see function 'run_experiments'
 
@@ -226,5 +242,10 @@ if __name__ == '__main__':
     #             'doc2vec_ttr_concreteness', 'doc2vec_ttr_linguistic', 'doc2vec_ttr_concreteness_linguistic',
     #             'tfidf_concreteness', 'doc2vec_ttr_concreteness_linguistic_tfidf', 'tm_ttr_concreteness_linguistic']
 
-    features = ['tfidf']
+    features = ['word1', 'tfidf', 'doc2vec', 'improved_concreteness', 'doc2vec_concreteness', 'tfidf_concreteness',
+                'doc2vec_ttr_concreteness','tense_mood_voice', 'tfidf_doc2vec', 'tfidf_doc2vec_concreteness', 'tfidf_doc2vec_word1', 'tfidf_word1_concreteness',
+                 'word1_doc2vec_concreteness', 'word1_doc2vec_tfidf_concreteness']
+
+    # features = ['tfidf']
+
     main()

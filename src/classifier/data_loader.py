@@ -8,7 +8,8 @@ def load_annotated_data(threshold):
     """
 
     # Data from Piper 2022
-    path = '../../dataset/MinNarrative_ReaderData_Final.csv'
+    # path = '../../dataset/MinNarrative_ReaderData_Final.csv'
+    path = '../../dataset/Universal_Annotation_Results_Selection.csv'
     df = pd.read_csv(path)
     print("Loading annotated data from:", path)
     X, Y = [], []
@@ -28,7 +29,8 @@ def load_annotated_data_3class():
     [2-3] = NEUTRAL
     (3,5] = POS
     """
-    df = pd.read_csv('../../dataset/MinNarrative_ReaderData_Final.csv', delimiter=',')
+    df = pd.read_csv('../../dataset/Universal_Annotation_Results_Selection.csv', delimiter=',')
+    # df = pd.read_csv('../../dataset/MinNarrative_ReaderData_Final.csv', delimiter=',')
 
     # 3 class where: are the three classes.
     X, Y = [], []

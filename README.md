@@ -27,7 +27,7 @@ Dataset\_and\_BookNLP_processing.ipynb - This notebook takes the complete datase
 
 MinNarrative\_ReaderData_Final.csv - Annotated data set from Piper et al. (2022). A part of their computed feature values are included in this file and used by our model during training.
 
-MinNarrative\_ReaderData_Final.csv - Annotated data set from Piper et al. (2022). A part of their computed feature values are included in this file and used by our model during training. Our computed feature values are included in this file as well.
+Steg\_Extended\_MinNarrative\_ReaderData\_Final.csv  - Annotated data set from Piper et al. (2022). A part of their computed feature values are included in this file and used by our model during training. Our computed feature values are included in this file as well.
 
 Concreteness\_ratings\_Brysbaert\_et\_al_BRM - Concreteness ratings Brysbaert et al. for 1- and 2-word expressions
 

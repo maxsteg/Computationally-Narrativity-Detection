@@ -14,7 +14,7 @@ from string import punctuation
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 from gensim.corpora import Dictionary
 from lexical_diversity import lex_div as ld
-from top2vec import Top2Vec
+# from top2vec import Top2Vec
 
 np.random.seed(seed_value)
 BOOK_PATH = "../../dataset/BookNLP_output/"
@@ -22,22 +22,22 @@ print('\n----\nUsing the BookNLP path:', BOOK_PATH)
 
 
 def temporal_order(fname):
-    df = pd.read_csv('../../dataset/MinNarrative_ReaderData_Final.csv', delimiter=',')
+    df = pd.read_csv('../../dataset/Universal_Annotation_Results_Selection.csv', delimiter=',')
     return float(df.loc[df['FILENAME'] == fname]['temporal_order'])
 
 
 def temporality(fname):
-    df = pd.read_csv('../../dataset/MinNarrative_ReaderData_Final.csv', delimiter=',')
+    df = pd.read_csv('../../dataset/Universal_Annotation_Results_Selection.csv', delimiter=',')
     return float(df.loc[df['FILENAME'] == fname]['temporality'])
 
 
 def saying(fname):
-    df = pd.read_csv('../../dataset/MinNarrative_ReaderData_Final.csv', delimiter=',')
+    df = pd.read_csv('../../dataset/Universal_Annotation_Results_Selection.csv', delimiter=',')
     return float(df.loc[df['FILENAME'] == fname]['saying'])
 
 
 def setting(fname):
-    df = pd.read_csv('../../dataset/MinNarrative_ReaderData_Final.csv', delimiter=',')
+    df = pd.read_csv('../../dataset/Universal_Annotation_Results_Selection.csv', delimiter=',')
     return float(df.loc[df['FILENAME'] == fname]['setting'])
 
 
@@ -74,27 +74,27 @@ def concreteness(fname):
 
 
 def eventfulness(fname):
-    df = pd.read_csv('../../dataset/MinNarrative_ReaderData_Final.csv', delimiter=',')
+    df = pd.read_csv('../../dataset/Universal_Annotation_Results_Selection.csv', delimiter=',')
     return float(df.loc[df['FILENAME'] == fname]['eventfulness'])
 
 
 def feltness(fname):
-    df = pd.read_csv('../../dataset/MinNarrative_ReaderData_Final.csv', delimiter=',')
+    df = pd.read_csv('../../dataset/Universal_Annotation_Results_Selection.csv', delimiter=',')
     return float(df.loc[df['FILENAME'] == fname]['feltness'])
 
 
 def coherence(fname):
-    df = pd.read_csv('../../dataset/MinNarrative_ReaderData_Final.csv', delimiter=',')
+    df = pd.read_csv('../../dataset/Universal_Annotation_Results_Selection.csv', delimiter=',')
     return float(df.loc[df['FILENAME'] == fname]['coh_seq'])
 
 
 def agency(fname):
-    df = pd.read_csv('../../dataset/MinNarrative_ReaderData_Final.csv', delimiter=',')
+    df = pd.read_csv('../../dataset/Universal_Annotation_Results_Selection.csv', delimiter=',')
     return float(df.loc[df['FILENAME'] == fname]['agency'])
 
 
 def agenthood(fname):
-    df = pd.read_csv('../../dataset/MinNarrative_ReaderData_Final.csv', delimiter=',')
+    df = pd.read_csv('../../dataset/Universal_Annotation_Results_Selection.csv', delimiter=',')
     return float(df.loc[df['FILENAME'] == fname]['agenthood'])
 
 
