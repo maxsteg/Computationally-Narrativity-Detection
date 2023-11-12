@@ -10,8 +10,8 @@ The accompanying paper can be found here: http://ceur-ws.org/Vol-2989/long_paper
 
 
 IMPORTANT: To prevent problems running parts of the code, edit the variable BOOK_PATH in /src/classifier/config.py to
-the absolute path of the BookNLP output on your PC. The data set, BookNLP output and Concreteness Rating files are not standard included in this project
-directory.
+the absolute path of the BookNLP output on your PC. The data set files are not included in this project
+directory because part of them is protected by copyright.
 
 ---------------------------------
 FILES AND HOW TO USE
